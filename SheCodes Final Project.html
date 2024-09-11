@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SheCodes Final Project</title>
+        <style>
+           *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           }
+           section{
+            position: absolute;
+            width: 100%;
+            min-height: 100vh;
+            padding: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+             
+           }
+           header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+           }
+           hr {
+    border: none; /* Remove any existing border styles */
+    border-top: 1px solid #000; /* Add a simple horizontal line */
+}
+
+           header h1 a{
+            text-decoration: none;
+            color: #000;
+           }
+           header ul li{
+            list-style: none;
+           }
+           .content{
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+           }
+           .content .text{
+            position: relative;
+            max-width: 600px;
+           }
+           .content .text h2{
+            color: #333;
+            font-size: 4em;
+            line-height: 1.4em;
+            font-weight: 500;
+           }
+           .content .text h2 span{
+            color: #017143;
+            font-size: 1.2em;
+            font-weight: 900;
+           }
+           .content .text p{
+            color: #333;
+           }
+           .content .text button{
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8ox 20px;
+            background: linear-gradient(114.3deg, rgb(19, 126, 57) 0.2%, rgb(8, 65, 91) 68.5%);
+            color: #fff;
+            border-radius: 40px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            box-shadow: 0.1px 5px 5px #017143;
+            border: 2px solid #017143;
+            transition: border-color 0.3s ease;
+           }
+           .content .text button:hover {
+             border-color: #013a28;
+           }
+        </style>
+    </head>
+    <body>
+        <section>
+            <header>
+                <h1>
+                    <a href="#" alt="Starbucks link">Starbucks</a>
+                </h1>
+            </header>
+            <hr/>
+            <div class="content">
+                <div class="text">
+                    <h2>It's not just coffee<br/>It's <span>Starbucks</span></h2>
+                    <p>
+                        Step into the enticing world of <strong>Starbucks</strong> beverages, where each sip tells a story and every
+                         flavour is an invitation to embark on a <em>delicious</em> adventure.
+                    </p>
+                    <button>Learn More</button>
+                </div>
+                <div class="image-box">
+                  <img alt="starbucks frappuccino image" src="https://freepngimg.com/thumb/starbucks/77325-frappuccino-drink-chocolate-starbucks-matcha-white.png" class="starbucks"/>
+                </div>
+            </div>
+        </section>
+
+        <!-- let, if, else, alert, prompt, event -->
+
+        <script>
+            
+            let firstName = prompt("What is your name?");
+            alert("Hi "+ firstName + ". Welcome to Starbucks.");
+
+            function Starbucks(){
+                let favdrink = prompt("What is your favourite thing to buy at Starbucks?");
+                let drink = document.querySelector('p');
+
+                if(favdrink === "Frappuccino"){
+                    drink.innerHTML = "Indulge in a symphony of flavours with every sip of the Starbucks Frappuccino, where creamy swirls dance with a melody of rich coffee notes, crafting an irresistable ode to caffeinated bliss.";
+                }
+                else{
+                    drink.innerHTML = "Explore an ocean of possibilities beyond the Frappuccino, where each sip unveils a new adventure - from the bold elegance of an espresso macchiato to the refreshing zest of a mango dragonfruit refresher, there's a Starbucks drink for every mood and moment.";
+                }
+            }
+            let drinkButton = document.querySelector("button");
+            drinkButton.addEventListener("click", Starbucks);
+        </script>
+    </body>
+
+</html>
